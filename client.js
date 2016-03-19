@@ -31,8 +31,6 @@ config = require('./config')
 }
 ,co = require('co')
 
-var wsg, sendToWs
-
 log(config.siteName, 'client', 'start at:', wsUri)
 
 ws.on('open', () => {

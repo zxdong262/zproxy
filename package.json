@@ -1,20 +1,21 @@
 {
-  "name": "io-proxy",
-  "version": "0.0.1",
-  "description": "a app proxy http request from server to localhost",
+  "name": "zproxy",
+  "version": "0.0.2",
+  "description": "a app proxy http post/get from server to local server",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "node server.js"
     ,"test": "cp config-sample.js config.js & node server.js & node client.js & node test/test-server.js & mocha test/test.js"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/zxdong262/io-proxy.git"
+    "url": "https://github.com/zxdong262/zproxy.git"
   },
   "keywords": [
     "proxy",
     "server",
-    "localhost"
+    "local",
+    "websocket"
   ],
   "author": {
     "name": "ZHAO Xudong",
@@ -22,25 +23,25 @@
     "url": "http://html5beta.com"
   },
   "dependencies": {
-    "bufferutil": "*",
-    "koa": "*",
-    "shortid": "*",
-    "utf-8-validate": "*",
-    "ws": "*",
-    "request": "*",
-    "koa-bodyparser": "*",
-    "koa-conditional-get": "*",
+    "bufferutil": "1.2.1",
+    "koa": "1.2.0",
+    "shortid": "2.2.4",
+    "utf-8-validate": "1.2.1",
+    "ws": "1.0.1",
+    "request": "2.69.0",
+    "koa-bodyparser": "2.0.1",
+    "koa-conditional-get": "1.0.3",
     "shortid": "*"
   },
   "devDependencies": {
     "mocha": "2.4.5"
-    ,"co": "*"
+    ,"co": "4.6.0"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/zxdong262/io-proxy/issues"
+    "url": "https://github.com/zxdong262/zproxy/issues"
   },
-  "homepage": "https://github.com/zxdong262/io-proxy",
+  "homepage": "https://github.com/zxdong262/zproxy",
   "engines": {
     "node": ">= 4.0"
   }
