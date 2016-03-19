@@ -1,0 +1,47 @@
+{
+  "name": "io-proxy",
+  "version": "0.0.1",
+  "description": "a app proxy http request from server to localhost",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+    ,"test": "cp config-sample.js config.js & node server.js & node client.js & node test/test-server.js & mocha test/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zxdong262/io-proxy.git"
+  },
+  "keywords": [
+    "proxy",
+    "server",
+    "localhost"
+  ],
+  "author": {
+    "name": "ZHAO Xudong",
+    "email": "zxdong@gmail.com",
+    "url": "http://html5beta.com"
+  },
+  "dependencies": {
+    "bufferutil": "*",
+    "koa": "*",
+    "shortid": "*",
+    "utf-8-validate": "*",
+    "ws": "*",
+    "request": "*",
+    "koa-bodyparser": "*",
+    "koa-conditional-get": "*",
+    "shortid": "*"
+  },
+  "devDependencies": {
+    "mocha": "2.4.5"
+    ,"co": "*"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zxdong262/io-proxy/issues"
+  },
+  "homepage": "https://github.com/zxdong262/io-proxy",
+  "engines": {
+    "node": ">= 4.0"
+  }
+}
