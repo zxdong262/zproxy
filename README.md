@@ -45,12 +45,12 @@ module.exports = {
 
 ```
 
-## run the server 
+run the server 
 ```bash
 node server
 ```
 
-## run the client 
+run the client 
 ```bash
 node client
 ```
