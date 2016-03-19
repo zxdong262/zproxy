@@ -49,7 +49,7 @@ app.use(function *(next) {
 	var msg0 = JSON.stringify(info)
 
 	wsg.send(msg0)
-
+	log(msg0)
 	var res = yield waitForRes(id)
 
 	removeData(id)

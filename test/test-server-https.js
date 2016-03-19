@@ -9,12 +9,11 @@ koa = require('koa')
 ,tools = require('../lib/tools')
 ,log = tools.log
 ,err = tools.err
-,config = require('../config-sample')
+,config = require('../config')
 ,ports = config.localServer.split(':')
 ,port = parseInt(ports[ports.length - 1], 10)
-,http = require('http')
 ,https = require('https')
-,portHttps = port + 1
+,portHttps = port
 ,ssl = {
 	key: fs.readFileSync(__dirname + '/cert/test.key.pem')
 	,cert: fs.readFileSync(__dirname + '/cert/test.server.pem')
@@ -34,10 +33,6 @@ app.use(function* (next) {
 
 	this.body = info
 
-})
-
-http.createServer(app.callback()).listen(port, function() {
-	log(config.siteName, 'test http server runs on port', port)
 })
 
 https.createServer(ssl, app.callback()).listen(portHttps, function() {

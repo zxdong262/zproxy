@@ -1,18 +1,18 @@
 # zproxy
-a app proxy http post/get from server to local server.
+a app proxy http(s) post/get from server to local server.
 
 ## how it works
 
 ```java
-remote request--http request--> zproxy server --web socket--> local websocket client -->
---http--> local http server  -->
+remote request--http(s) request--> zproxy server --web socket--> local websocket client -->
+--http(s)--> local http(s) server  -->
 
---http response--> local websocket client --web socket--> zproxy server 
---http response--> remote request 
+--http(s) response--> local websocket client --web socket--> zproxy server 
+--http(s) response--> remote request 
 ```
 
 ## limited power
-it has limited power, can only handle post/get http request, and only one request once, so, can be used at some test cases only.
+it has limited power, can only handle post/get http(s) request, and only one request once, so, can be used at some test cases only.
 
 ## how to use
 
@@ -63,11 +63,21 @@ node client
 git clone git@github.com:zxdong262/zproxy.git
 cd zproxy
 npm i
+
+#test http
 cp config-sample.js config.js
 node server.js
 node client.js
 node test/test-server.js
 mocha test/test.js
+
+#test https
+cp config-sample.js config.js
+node server.js
+node client.js
+node test/test-server-https.js
+mocha test/test-https.js
+
 ```
 
 ## license

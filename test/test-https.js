@@ -50,10 +50,11 @@ var assert = require('assert')
 
 describe(config.siteName, function() {
 
+	this.timeout(500000)
 
-	it('http post/get', function(done) {
+	it('https post/get', function(done) {
 
-		co(postGet())
+		co(postGetHttps())
 		.then(ok, error)
 
 		function ok() {
@@ -66,18 +67,22 @@ describe(config.siteName, function() {
 
 	})
 
+
 })
 
-function* postGet() {
+function* postGetHttps() {
 
 	//request
+	var url = 'https://'  + config.listenAddrServer + ':' + config.sslOption.portServer + '?bar=foo'
+	console.log(url)
 	let opt = {
-		uri: 'http://'  + config.listenAddrServer + ':' + config.portServer + '?bar=foo'
+		uri: url
 		,method: 'post'
 		,body: {
 			foo: 'bar'
 		}
 		,json: true
+		,strictSSL: false
 	}
 
 	var res = yield qr(opt)
@@ -87,3 +92,6 @@ function* postGet() {
 	return Promise.resolve()
 
 }
+
+
+
