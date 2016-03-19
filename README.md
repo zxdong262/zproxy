@@ -72,7 +72,7 @@ node test/test-server.js
 mocha test/test.js
 
 #test https
-cp config-sample.js config.js
+cp test/config-sample-https.js config.js
 node server.js
 node client.js
 node test/test-server-https.js
