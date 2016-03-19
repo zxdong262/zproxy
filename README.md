@@ -11,6 +11,9 @@ remote request--http request--> zproxy server --web socket--> local websocket cl
 --http response--> remote request 
 ```
 
+## limited power
+it has limited power, can only handle post/get http request, and only one request once, so, can be used at some test cases only.
+
 ## how to use
 
 ```bash
