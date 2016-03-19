@@ -1,6 +1,6 @@
 {
   "name": "zproxy",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "a app proxy http post/get from server to local server",
   "main": "app.js",
   "scripts": {

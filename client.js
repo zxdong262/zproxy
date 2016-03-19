@@ -57,7 +57,6 @@ ws.on('message', function message(data, flags) {
 		,json: true
 		,strictSSL: false
 	}
-	console.log(opt0)
 	co(qr(opt0))
 	.then(ok, error)
 
@@ -67,7 +66,6 @@ ws.on('message', function message(data, flags) {
 			body: body
 			,id: opt.id
 		}
-		console.log(body)
 		let str = JSON.stringify(obj)
 		ws.send(str, { mask: true })
 	}
